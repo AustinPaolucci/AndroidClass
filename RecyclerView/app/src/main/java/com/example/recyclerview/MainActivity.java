@@ -2,16 +2,11 @@ package com.example.recyclerview;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +19,7 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final LinkedList<String> mWordList = new LinkedList<>();
+    private LinkedList<String> mWordList = new LinkedList<>();
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
@@ -77,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+
     }
 
     @Override
@@ -87,7 +83,13 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_reset) {
+            mWordList.clear();
+            for(int i = 0; i < 20; i++)
+            {
+                mWordList.addLast("Word " + i);
+            }
+            mAdapter.notifyDataSetChanged();
             return true;
         }
 
