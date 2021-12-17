@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/temperament"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedDogView">
+
+    <TextView
+        android:id="@+id/breedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dogImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breedName"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/Temperament"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/temperament"
+        android:textSize="@dimen/DogDetailsTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dogImage" />
+
+    <TextView
+        android:id="@+id/LifeSpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/life_span"
+        android:textSize="@dimen/DogDetailsTextSize"
+        app:layout_constraintStart_toStartOf="@+id/Temperament"
+        app:layout_constraintTop_toBottomOf="@+id/temperamentDetail" />
+
+    <TextView
+        android:id="@+id/BredFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bred_for"
+        android:textSize="@dimen/DogDetailsTextSize"
+        app:layout_constraintStart_toStartOf="@+id/Temperament"
+        app:layout_constraintTop_toBottomOf="@+id/LifeSpanDetail" />
+
+    <TextView
+        android:id="@+id/temperamentDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="cute!"
+        android:layout_marginStart="10dp"
+        android:textSize="@dimen/DogDetailsTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Temperament"
+        app:layout_constraintTop_toTopOf="@+id/Temperament" />
+
+    <TextView
+        android:id="@+id/LifeSpanDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="cute!"
+        android:layout_marginStart="10dp"
+        android:textSize="@dimen/DogDetailsTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LifeSpan"
+        app:layout_constraintTop_toTopOf="@+id/LifeSpan" />
+
+    <TextView
+        android:id="@+id/BredForDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="cute!"
+        android:layout_marginStart="10dp"
+        android:textSize="@dimen/DogDetailsTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BredFor"
+        app:layout_constraintTop_toTopOf="@+id/BredFor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

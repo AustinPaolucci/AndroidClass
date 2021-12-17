@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Dog</string>
+    <string name="title_activity_deatiled_dog_view">DeatiledDogView</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="temperament">Temperament:</string>
+    <string name="life_span">Life Span:</string>
+    <string name="textview">TextView</string>
+    <string name="bred_for">Bred For:</string>
+    <string name="dog_breeds">Dog Breeds</string>
+</resources>
